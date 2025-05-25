@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slot Machine 🎰</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎰 Slot Machine</h1>
+<!--    <p>Balance: <span id="balance">250000</span> INR</p>       -->
+        <p>Balance: <span id="balance" style="color: green; font-weight: bold;">2499990</span> INR</p>
+
+        <input type="number" id="bet" value="10" min="1">
+        <button onclick="spin()">Spin</button>
+
+        <div id="grid-container" class="grid"></div>
+        <div id="result"></div>
+    </div>
+
+    <audio id="spinSound" src="/static/spin.mp3"></audio>
+    <audio id="winSound" src="/static/win.mp3"></audio>
+    <audio id="loseSound" src="/static/lose.mp3"></audio>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
